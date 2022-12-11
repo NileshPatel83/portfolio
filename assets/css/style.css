@@ -1,7 +1,13 @@
 
 :root{
     --white-color:  #ffffff;
+    --padding-top: 1rem;
+    --paddding-left: 1rem;
+    --left-indent: 11rem;
+    --about-me-height: 6rem;
+    --margin-gap: 1rem;
 }
+
 *{
     margin: 0;
     padding: 0;
@@ -10,13 +16,12 @@
 
 body{   
     background-image: url(../images/BackgroundIamge.png);
-    max-width: 1920px;
 }
 
 header, footer{
     display: block;
     background-color:#096594;
-    padding: 1rem;
+    padding: var(--margin-gap);
 }
 
 footer{
@@ -48,23 +53,67 @@ header a{
 }
 
 .photo{
-    display: block;
     height: 12rem;
+    padding-top: var(--padding-top);
+    padding-left: var(--paddding-left);
 }
 
 .photo img{
-    float: left;
-    padding: 0.5rem;
-    height: 12rem;
-    width: 12rem;
-}
-
-.photo div{
-    display: inline;
-    padding: 1rem;
-    word-wrap: break-word;
+    float: left; 
+    width: var(--left-indent);
+    margin-right: var(--margin-gap);
 }
 
 .photo h2{
+    display: inline;
     font-size: 1.5rem;
+}
+
+.about-me{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: var(--about-me-height);
+    padding-top: var(--padding-top);
+    padding-left: var(--paddding-left);
+}
+
+.about-me-header{
+    height:  var(--about-me-height);
+    line-height: var(--about-me-height);
+    width: var(--left-indent);
+    margin-right: var(--margin-gap);
+    font-size: 1.5rem;
+    text-align: right;
+    
+}
+
+@media screen and (min-width: 768px)
+{
+    .about-me-header {
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+        border-right: none;
+    }
+
+    .about-me-text{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+
+@media screen and (min-width: 992px)
+{
+    .about-me-header {
+        flex: 0 0 var(--left-indent);
+        max-width: var(--left-indent);
+        border-right: black solid 0.25rem;
+    }
+
+    .about-me-text{
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
 }
