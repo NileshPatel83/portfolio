@@ -8,9 +8,10 @@
     font-size: 18px;
 }
 
-/* body{
+body{   
     background-image: url(../images/BackgroundIamge.png);
-} */
+    max-width: 1920px;
+}
 
 header, footer{
     display: block;
@@ -37,12 +38,33 @@ header nav{
 header li{
     display: inline;
     padding: 0 20px;
-    line-height: 2em;
-    
+    line-height: 2em;   
 }
 
 header a{
     text-decoration: none;
     font-weight: 600;
     color:var(--white-color);
+}
+
+.photo{
+    display: block;
+    height: 12rem;
+}
+
+.photo img{
+    float: left;
+    padding: 0.5rem;
+    height: 12rem;
+    width: 12rem;
+}
+
+.photo div{
+    display: inline;
+    padding: 1rem;
+    word-wrap: break-word;
+}
+
+.photo h2{
+    font-size: 1.5rem;
 }
