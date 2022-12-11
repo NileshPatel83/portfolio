@@ -88,7 +88,7 @@ header a{
     
 }
 
-@media screen and (min-width: 768px)
+@media screen and (max-width: 768px)
 {
     .about-me-header {
         flex: 0 0 100%;
@@ -101,19 +101,18 @@ header a{
         flex: 0 0 100%;
         max-width: 100%;
     }
-}
 
-
-@media screen and (min-width: 992px)
-{
-    .about-me-header {
-        flex: 0 0 var(--left-indent);
-        max-width: var(--left-indent);
-        border-right: black solid 0.25rem;
+    header h1{
+        display: block;
+        text-align: center;
     }
 
-    .about-me-text{
-        flex: 0 0 75%;
-        max-width: 75%;
+    header nav{
+        text-align: center;
+        float: none;
+    }
+
+    header li{
+        display: block;
     }
 }
