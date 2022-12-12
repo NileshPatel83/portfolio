@@ -19,6 +19,7 @@
 }
 
 body{   
+
     background-image: url(../images/BackgroundIamge.png);
 }
 
@@ -77,22 +78,29 @@ header a{
     /* height: var(--about-me-height); */
     margin-top: var(--padding-top);
     padding-left: var(--paddding-left);
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .about-me-header{
-    float: left;
+    /* float: left; */
+    /* position: absolute; */
+    /* height: 100%; */
     /* height:  var(--about-me-height); */
     /* line-height: var(--about-me-height); */
-    width: var(--left-indent);
+    /* width: var(--left-indent); */
     margin-right: var(--margin-gap);
     font-size: 1.5rem;
     text-align: right;
     border-right: black solid 0.25rem;
     padding-right: 1rem;
+    flex: 0 0 var(--left-indent);
 }
 
 .about-me-text{
-    display: inline;
+    /* position: absolute;
+    display: inline; */
+    flex: 1;
     text-align: justify;
 }
 
@@ -181,6 +189,10 @@ header a{
 }
 
 @media screen and (max-width: 768px){
+
+    .about-me{
+        flex-direction: column;
+    }
 
     .about-me-header, .my-work-header, .contact-me-header, .resume-header{
         display: block;

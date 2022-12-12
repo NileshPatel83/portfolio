@@ -2,6 +2,7 @@
 :root{
     --white-color:  #ffffff;
     --margin-gap: 1rem;
+    --left-indent: 11rem;
 }
 
 *{
@@ -47,3 +48,58 @@ header a{
     font-weight: 600;
     color:var(--white-color);
 }
+
+.photo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.photo img{
+    flex: 0 0 var(--left-indent);
+    margin-right: var(--margin-gap);
+}
+
+.photo h2{
+    flex: 1;
+    text-align: justify;
+    font-size: 1.5rem;
+}
+
+@media screen and (min-width:769px){
+
+}
+
+@media screen and (max-width: 768px){
+
+    header h1{
+        display: block;
+        text-align: center;
+    }
+
+    header nav{
+        text-align: center;
+        float: none;
+    }
+
+    header li{
+        display: block;
+    }
+
+    .main-project, .other-projects{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .photo{
+        flex-direction: column;
+        display: block;
+        justify-content: center;
+    }
+
+    .photo img{
+       display: block;
+       margin: 0 auto;
+    }
+}
+
