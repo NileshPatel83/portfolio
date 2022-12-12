@@ -5,7 +5,7 @@
     --paddding-left: 1rem;
     --left-indent: 11rem;
     --about-me-height: 6rem;
-    --my-work-height: 50rem;
+    --my-work-height: 102rem;
     --contact-me-height: 8rem;
     --resume-height: 8rem;
     --resume-header-height: 7rem;
@@ -74,14 +74,14 @@ header a{
 }
 
 .about-me{
-    height: var(--about-me-height);
+    /* height: var(--about-me-height); */
     margin-top: var(--padding-top);
     padding-left: var(--paddding-left);
 }
 
 .about-me-header{
     float: left;
-    height:  var(--about-me-height);
+    /* height:  var(--about-me-height); */
     /* line-height: var(--about-me-height); */
     width: var(--left-indent);
     margin-right: var(--margin-gap);
@@ -97,14 +97,14 @@ header a{
 }
 
 .my-work{
-    height: var(--my-work-height);
+    /* height: var(--my-work-height); */
     margin-top: var(--padding-top);
     padding-left: var(--paddding-left);
 }
 
 .my-work-header{
     float: left;
-    height:  var(--my-work-height);
+    /* height:  var(--my-work-height); */
     /* line-height: var(--my-work-height); */
     width: var(--left-indent);
     margin-right: var(--margin-gap);
@@ -121,15 +121,25 @@ header a{
     flex-wrap: wrap;
 }
 
+.main-project img{
+    width: 95%;
+    margin: 1rem;
+}
+
+.other-projects img{
+    width: 95%;
+    margin: 1rem;
+}
+
 .contact-me{
-    height: var(--contact-me-height);
+    /* height: var(--contact-me-height); */
     margin-top: var(--padding-top);
     padding-left: var(--paddding-left);
 }
 
 .contact-me-header{
     float: left;
-    height:  var(--contact-me-height);
+    /* height:  var(--contact-me-height); */
     /* line-height: var(--contact-me-height); */
     width: var(--left-indent);
     margin-right: var(--margin-gap);
@@ -144,14 +154,14 @@ header a{
 }
 
 .resume{
-    height: var(--resume-height);
+    /* height: var(--resume-height); */
     margin-top: var(--padding-top);
     padding-left: var(--paddding-left);
 }
 
 .resume-header{
     float: left;
-    height:  var(--resume-header-height);
+    /* height:  var(--resume-header-height); */
     /* line-height: var(--resume-header-height); */
     width: var(--left-indent);
     margin-right: var(--margin-gap);
