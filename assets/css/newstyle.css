@@ -60,14 +60,54 @@ header a{
     margin-right: var(--margin-gap);
 }
 
+.about-me, .my-work, .contact-me, .resume{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: var(--margin-gap);
+}
+
 .photo h2{
     flex: 1;
     text-align: justify;
     font-size: 1.5rem;
 }
 
-@media screen and (min-width:769px){
+.about-me-text, .contact-me-text, .resume-text{
+    flex: 1;
+    text-align: justify;
+}
 
+.about-me-header, .my-work-header, .contact-me-header, .resume-header{
+    flex: 0 0 var(--left-indent);
+    margin-right: var(--margin-gap);
+    font-size: 1.5rem;
+    text-align: right;
+    border-right: black solid 0.25rem;
+    padding-right: 1rem;
+}
+
+.resume img{
+    margin-top: 1rem;
+    height: 2rem;
+}
+
+.all-projects{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.main-project{
+    /* flex: 0 0 inherit;
+    max-width: inherit; */
+    width: 100%;
+}
+
+.other-projects{
+    flex: 0 0 50%;
+    max-width: 50%;
 }
 
 @media screen and (max-width: 768px){
@@ -86,12 +126,7 @@ header a{
         display: block;
     }
 
-    .main-project, .other-projects{
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-
-    .photo{
+    .photo, .about-me, .my-work, .contact-me, .resume{
         flex-direction: column;
         display: block;
         justify-content: center;
@@ -100,6 +135,18 @@ header a{
     .photo img{
        display: block;
        margin: 0 auto;
+    }
+
+    .about-me-header, .my-work-header, .contact-me-header, .resume-header{
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        border-right: none;
+     }
+
+     .main-project, .other-projects{
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 }
 
