@@ -12,7 +12,8 @@
 }
 
 body{   
-    background-image: url(../images/BackgroundIamge.png);
+    background-image: url(../images/BackgroundIamge-2.png);
+    color:#ffffff;
 }
 
 header, footer{
@@ -73,7 +74,7 @@ header a{
     font-size: 1.5rem;
 }
 
-.about-me-text, .contact-me-text, .resume-text{
+.about-me-text, .contact-me-text, .resume-pdf{
     flex: 1;
     text-align: justify;
 }
@@ -88,7 +89,6 @@ header a{
 }
 
 .resume img{
-    margin-top: 1rem;
     height: 2rem;
 }
 
@@ -137,7 +137,7 @@ header a{
        margin: 0 auto;
     }
 
-    .about-me-header, .my-work-header, .contact-me-header, .resume-header{
+    .about-me-header, .my-work-header, .contact-me-header, .resume-header, .resume img{
         display: block;
         margin: 0 auto;
         text-align: center;
