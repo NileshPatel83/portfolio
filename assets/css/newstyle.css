@@ -2,6 +2,7 @@
     --white-color:  #ffffff;
     --margin-gap: 1rem;
     --left-indent: 11rem;
+    --border-thickness: 0.25rem
 }
 
 *{
@@ -69,7 +70,7 @@ header a{
 
 .about-me-header, .contact-me-header, .resume-header{
     padding-right: 1rem;
-    border-right: var(--white-color) solid 0.25rem;   
+    border-right: var(--white-color) solid var(--border-thickness);   
 }
 
 .photo-text, .about-me-text, .contact-me-text, .resume-image{
@@ -200,7 +201,7 @@ header a{
     .about-me-header, .contact-me-header, .resume-header{
         padding-right: 0;
         margin-top: var(--margin-gap);
-        border-bottom: var(--white-color) solid 0.25rem;
+        border-bottom: var(--white-color) solid var(--border-thickness);  
     }
 
     .photo-text, .about-me-text, .contact-me-text, .resume-image{
