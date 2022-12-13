@@ -79,6 +79,10 @@ header a{
     text-align: justify;
 }
 
+.contact-me-text li{
+    height: 2rem;    
+}
+
 .about-me-header, .my-work-header, .contact-me-header, .resume-header{
     flex: 0 0 var(--left-indent);
     margin-right: var(--margin-gap);
@@ -88,8 +92,24 @@ header a{
     padding-right: 1rem;
 }
 
-.resume img{
+.contact-me-text img, .resume img{
     height: 2rem;
+    float: left;
+    padding: 0.25rem;
+}
+
+.contact-me-text span, .contact-me-text a{
+    line-height: 2rem;
+    text-decoration: none;
+    color:var(--white-color);
+}
+
+.contact-me-text div{
+    float: left;;
+}
+
+.contact-me-text div li{
+    display: inline;
 }
 
 .all-projects{
