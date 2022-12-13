@@ -56,24 +56,24 @@ header a{
     line-height: 2rem;
 }
 
-.photo-section, .about-me, .contact-me, .resume{
+.photo-section, .about-me, .my-work, .all-projects, .contact-me, .resume{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: var(--margin-gap);
 }
 
-.photo, .about-me-header, .contact-me-header, .resume-header{
+.photo, .about-me-header, .my-work-header, .contact-me-header, .resume-header{
     flex: 0 0 var(--left-indent);
     margin-right: var(--margin-gap); 
 }
 
-.about-me-header, .contact-me-header, .resume-header{
+.about-me-header, .my-work-header, .contact-me-header, .resume-header{
     padding-right: 1rem;
     border-right: var(--white-color) solid var(--border-thickness);   
 }
 
-.photo-text, .about-me-text, .contact-me-text, .resume-image{
+.photo-text, .about-me-text, .all-projects, .contact-me-text, .resume-image{
     flex: 1;
     text-align: justify;
 }
@@ -91,6 +91,10 @@ header a{
     float: left;
     padding: 0.25rem;
 }
+
+/* .all-projects{
+    display: inline;
+} */
 
 /* 
 .photo{
@@ -171,6 +175,18 @@ header a{
     max-width: 50%;
 } */
 
+@media screen and (min-width: 992px){
+    .main-project{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .other-projects{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
 @media screen and (max-width: 768px){
 
     header h1{
@@ -187,7 +203,7 @@ header a{
         display: block;
     }
 
-    .photo-section, .about-me, .contact-me, .resume{
+    .photo-section, .about-me, .my-work, .contact-me, .resume{
         flex-direction: column;
     }
 
@@ -198,7 +214,7 @@ header a{
         border-right: none;
     }
 
-    .about-me-header, .contact-me-header, .resume-header{
+    .about-me-header, .my-work-header, .contact-me-header, .resume-header{
         padding-right: 0;
         margin-top: var(--margin-gap);
         border-bottom: var(--white-color) solid var(--border-thickness);  
