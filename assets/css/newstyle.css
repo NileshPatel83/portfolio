@@ -73,7 +73,7 @@ header a{
     border-right: var(--white-color) solid var(--border-thickness);   
 }
 
-.photo-text, .about-me-text, .all-projects, .contact-me-text, .resume-image{
+.photo-text, .about-me-text,.all-projects, .contact-me-text, .resume-image{
     flex: 1;
     text-align: justify;
 }
@@ -91,6 +91,33 @@ header a{
     float: left;
     padding: 0.25rem;
 }
+
+.main-project{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.other-projects{
+    flex: 0 0 50%;
+    max-width: 100%;
+}
+
+.main-project-image, .other-project-image{
+    max-width: inherit;
+    max-height: inherit;
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+    padding-top: var(--margin-gap);
+    padding-bottom: var(--margin-gap);
+    padding-right: var(--margin-gap);
+}
+
+
+
+
+
+
 
 /* .all-projects{
     display: inline;
@@ -175,7 +202,9 @@ header a{
     max-width: 50%;
 } */
 
-@media screen and (min-width: 992px){
+
+
+/* @media screen and (min-width: 992px){
     .main-project{
         flex: 0 0 100%;
         max-width: 100%;
@@ -185,7 +214,7 @@ header a{
         flex: 0 0 50%;
         max-width: 50%;
     }
-}
+} */
 
 @media screen and (max-width: 768px){
 
@@ -224,6 +253,26 @@ header a{
         margin-top: var(--margin-gap);
     }
 
+    .main-project, .other-projects{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .main-project-image, .other-project-image{
+        padding-left: var(--margin-gap);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
     /* .photo, .about-me{
         flex-direction: column;
         flex: none;
@@ -248,10 +297,6 @@ header a{
         display: block;
         margin: 0 auto;
      }
-
-     .main-project, .other-projects{
-        flex: 0 0 100%;
-        max-width: 100%;
-    } */
+      */
 }
 
