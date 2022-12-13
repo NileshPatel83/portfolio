@@ -1,4 +1,3 @@
-
 :root{
     --white-color:  #ffffff;
     --margin-gap: 1rem;
@@ -9,6 +8,7 @@
     margin: 0;
     padding: 0;
     font-size: 18px;
+    color:var(--white-color);
 }
 
 body{   
@@ -30,7 +30,6 @@ header h1{
     display: inline-block;
     font-size: 2rem;
     font-weight: 900;
-    color: var(--white-color);
 }
 
 header nav{
@@ -44,12 +43,55 @@ header li{
     line-height: 2rem;   
 }
 
-header a{
-    text-decoration: none;
+header a{  
     font-weight: 600;
-    color:var(--white-color);
 }
 
+.text-decoration{
+    text-decoration: none;
+}
+
+.line-height{
+    line-height: 2rem;
+}
+
+.photo-section, .about-me, .contact-me, .resume{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: var(--margin-gap);
+}
+
+.photo, .about-me-header, .contact-me-header, .resume-header{
+    flex: 0 0 var(--left-indent);
+    margin-right: var(--margin-gap); 
+}
+
+.about-me-header, .contact-me-header, .resume-header{
+    padding-right: 1rem;
+    border-right: var(--white-color) solid 0.25rem;   
+}
+
+.photo-text, .about-me-text, .contact-me-text, .resume-image{
+    flex: 1;
+    text-align: justify;
+}
+
+.contact-me-text li{
+    height: 2rem;    
+}
+
+.contact-me-text div li{
+    display: inline;
+}
+
+.symbol {
+    height: 2rem;
+    float: left;
+    padding: 0.25rem;
+}
+
+/* 
 .photo{
     display: flex;
     flex-direction: row;
@@ -88,7 +130,7 @@ header a{
     margin-right: var(--margin-gap);
     font-size: 1.5rem;
     text-align: right;
-    border-right: black solid 0.25rem;
+    border-right: var(--white-color) solid 0.25rem;
     padding-right: 1rem;
 }
 
@@ -120,15 +162,13 @@ header a{
 }
 
 .main-project{
-    /* flex: 0 0 inherit;
-    max-width: inherit; */
     width: 100%;
 }
 
 .other-projects{
     flex: 0 0 50%;
     max-width: 50%;
-}
+} */
 
 @media screen and (max-width: 768px){
 
@@ -146,9 +186,30 @@ header a{
         display: block;
     }
 
-    .photo, .about-me, .my-work, .contact-me, .resume{
+    .photo-section, .about-me, .contact-me, .resume{
         flex-direction: column;
-        display: block;
+    }
+
+    .center-content{
+        width: fit-content;
+        flex: 0 0;
+        margin: 0 auto;
+        border-right: none;
+    }
+
+    .about-me-header, .contact-me-header, .resume-header{
+        padding-right: 0;
+        margin-top: var(--margin-gap);
+        border-bottom: var(--white-color) solid 0.25rem;
+    }
+
+    .photo-text, .about-me-text, .contact-me-text, .resume-image{
+        margin-top: var(--margin-gap);
+    }
+
+    /* .photo, .about-me{
+        flex-direction: column;
+        flex: none;
         justify-content: center;
     }
 
@@ -157,16 +218,23 @@ header a{
        margin: 0 auto;
     }
 
-    .about-me-header, .my-work-header, .contact-me-header, .resume-header, .resume img{
+    .about-me-header{
         display: block;
         margin: 0 auto;
         text-align: center;
         border-right: none;
+        padding: 0;
+     } */
+
+     /* .resume img{
+        float: none;
+        display: block;
+        margin: 0 auto;
      }
 
      .main-project, .other-projects{
         flex: 0 0 100%;
         max-width: 100%;
-    }
+    } */
 }
 
