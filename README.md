@@ -2,26 +2,28 @@
 Portfolio Website
 
 ## Description
-A protfolio website has been created displaying following information.
-- Developer name in the header.
-- Recent photo of the developer.
-- 
+A portfolio website has been created displaying following information.
+- Name in the header.
+- Recent photo.
+- Navigation links that scrolls to corresponding section.
+- Section about recent projects completed.
+- First applications image is larger in size than other applications.
+- When the project image is hovered over, displays a shadow.
+- When the project image is clicked, takes the user to the deployed webpage of the project.
+- Contact section showing contact details including links to GitHub and LinkedIn profile.
+- Resume section where user can view developers resume in new window.
 
 ## Deployment
-The webpage is deployed to GitHub pages. Use below link to visit the webpage: https://nileshpatel83.github.io/Module02-MiniProject/
+The webpage is deployed to GitHub pages. Use below link to visit the webpage: https://nileshpatel83.github.io/portfolio/
 
 ## Screenshots
-- At size 992 pixel and above, the page resembles as following:
+- At size more than 768 pixel, the page resembles as following:
 
-![Desktop Webpage](./assets/image/Desktop.png)
+![Desktop Webpage](./assets/images/DesktopImage.png)
 
-- At size 768 pixel and above, the page resembles as following:
+- At size 768 pixel and below, the page resembles as following:
 
-![iPad Webpage](./assets/image/iPad.png)
-
-- At size less than 768 pixel and above, the page resembles as following:
-
-![Mobile Webpage](./assets/image/Mobile.png)
+![Mobile Webpage](./assets/images/MobileImage.png)
 
 ## License
 Please refer to the LICENSE in the repo.
