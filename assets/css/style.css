@@ -1,3 +1,4 @@
+/* Variables */
 :root{
     --white-color:  #ffffff;
     --margin-gap: 1rem;
@@ -6,6 +7,7 @@
     --background-color: #096594;
 }
 
+/* Removes all margin and padding, sets the font size and font color to white */
 *{
     margin: 0;
     padding: 0;
@@ -13,54 +15,66 @@
     color:var(--white-color);
 }
 
+/* Sets the background image for the page. */
 body{   
     background-image: url(../images/BackgroundIamge-2.png);
-    color:#ffffff;
 }
 
+/* Sets header and footer background color and padding all around. */
 header, footer{
     display: block;
     background-color:var(--background-color);
     padding: var(--margin-gap);
 }
 
+/* Sets the text to center of the page. */
 footer{
     text-align:  center;
 }
 
+/* Sets the main heading font size and also makes it bold. */
 header h1{
     display: inline-block;
     font-size: 2rem;
     font-weight: 900;
 }
 
+/* Moves menu text to righ had size. */
 header nav{
     text-align: right;
     float: right;
 }
 
+/* Makes the menu text to inline and add a padding on right. */
 header li{
     display: inline;
     padding: 0 20px;
     line-height: 2rem;   
 }
 
+/* Sets font weight to menu text. */
 header a{  
     font-weight: 600;
 }
 
+/* Removes hyperlinks from menu items. */
 .text-decoration{
     text-decoration: none;
 }
 
+/* Sets the text in the middle of line vertically. */
 .line-height{
     line-height: 2rem;
 }
 
+/* Sets the photo text size and weight. */
 .photo-text{
     font-size: 1.5rem;
+    font-weight: 700;
 }
 
+/* Makes photo, about me, my work, all prejects, contact me and resume sections flex and direction to row.
+Also sets the top margin. */
 .photo-section, .about-me, .my-work, .all-projects, .contact-me, .resume{
     display: flex;
     flex-direction: row;
@@ -68,61 +82,79 @@ header a{
     margin-top: var(--margin-gap);
 }
 
+/* Sets the top margin of all projects and contact me setcion to 0 as all project images have padding all around them. */
 .all-projects, .contact-me{
     margin-top: 0;
 }
 
+/* Makes left hand side of the page fixed width of 11rem. */
 .photo, .about-me-header, .my-work-header, .contact-me-header, .resume-header{
     flex: 0 0 var(--left-indent);
-    margin-right: var(--margin-gap); 
 }
 
+/* Adds a padding on right side for section header and also sets a border on left to separate the
+section heading from contents. */
 .about-me-header, .my-work-header, .contact-me-header, .resume-header{
     padding-right: 1rem;
     border-right: var(--white-color) solid var(--border-thickness);   
 }
 
+/* Makes the right hand side of each section flexible with screen width.
+ Makes the text justified. */
 .photo-text, .about-me-text,.all-projects, .contact-me-text, .resume-image{
     flex: 1;
     text-align: justify;
 }
 
+/* Adds the padding on left in contect for each section to separate them from the header border. */
+.photo-text, .about-me-text, .contact-me-text, .resume-image{
+    padding-left: var(--margin-gap);
+}
+
+/* Sets the height if contact list. */
 .contact-me-text li{
     height: 2rem;    
 }
 
+/* Makes the contact text items inline with the image. */
 .contact-me-text div li{
     display: inline;
 }
 
+/* Sets the height of contact and resume images.
+Makes them float left and adds padding all around. */
 .symbol {
     height: 2rem;
     float: left;
     padding: 0.25rem;
 }
 
+/* Sets the flex option for all project image links. */
 .project-link{
     flex: 0 0 100%;
     max-width: 100%;
     position: relative;
 }
 
+/* Makes other projects (other than main project) width to 50% so that two images fit on screen
+when screen width is more than 768 pixels. */
 .other-projects{
     flex: 0 0 50%;
     max-width: 100%;
 }
 
+/* Makes the images center to its parent element. */
 .main-project-image, .other-project-image{
     max-width: inherit;
     max-height: inherit;
     height: inherit;
     width: inherit;
     object-fit: cover;
-    padding-bottom: var(--margin-gap);
-    padding-right: var(--margin-gap);
+    padding: var(--margin-gap);
     position: relative;
 }
 
+/* Sets the project info text to bottom left hand side of the project image. */
 .project-info{
     text-align: center;
     background-color: var(--background-color);
@@ -131,34 +163,42 @@ header a{
     border: var(--white-color) solid var(--border-thickness);
     border-radius: 0.5rem;
     position: absolute;
+    left: var(--margin-gap);
     bottom: 1.22rem;
 }
 
+/* Sets the font size and line height for project info text which update with screen size. */
 .project-info h4, .project-info div{
     font-size: 1vw;
     line-height: 125%;
 }
 
+/* Sets the media query for screen up to 768 pixels. */
 @media screen and (max-width: 768px){
 
+    /* Makes the main heading as block and text to center of the screen. */
     header h1{
         display: block;
         text-align: center;
     }
 
+    /* Moves the navigation section texts to center. */
     header nav{
         text-align: center;
         float: none;
     }
 
+    /* Sets the menu items as block so that they are displayed as list and not inline. */
     header li{
         display: block;
     }
 
+    /* Sets all section direction to column. */
     .photo-section, .about-me, .my-work, .contact-me, .resume{
         flex-direction: column;
     }
 
+    /* Centers all texts and sets the width to fit the text. */
     .center-content{
         width: fit-content;
         flex: 0 0;
@@ -166,30 +206,41 @@ header a{
         border-right: none;
     }
 
+    /* Adds the margin to top of my project section. */
     .all-projects{
         margin-top: var(--margin-gap);
     }
 
+    /* Removes right hand side padding and border from header texts for all sections. */
     .about-me-header, .my-work-header, .contact-me-header, .resume-header{
         padding-right: 0;
         border-bottom: var(--white-color) solid var(--border-thickness);  
     }
 
+    /* Adds margin on top for all contents for all sections. */
     .photo-text, .about-me-text, .contact-me-text, .resume-image{
         margin-top: var(--margin-gap);
     }
 
+    /* Makes all project images to fit the screen width. */
     .main-project, .other-projects{
         flex: 0 0 100%;
         max-width: 100%;
     }
 
+    /* Adds a padding on left for all project images. */
     .main-project-image, .other-project-image{
         padding-left: var(--margin-gap);
     }
 
+    /* Moves the project info text to bottom corner of the project image. */
     .project-info{
         margin-left: var(--margin-gap);
     }
+}
+
+/* Sets the box shadow with white color when project section is hovered over. */
+.main-project:hover, .other-project-image:hover{
+    box-shadow: inset 0 0 var(--margin-gap) var(--white-color), inset 0 0 var(--margin-gap) var(--white-color);
 }
 
