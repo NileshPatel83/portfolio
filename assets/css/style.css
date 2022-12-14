@@ -57,6 +57,10 @@ header a{
     line-height: 2rem;
 }
 
+.photo-text{
+    font-size: 1.5rem;
+}
+
 .photo-section, .about-me, .my-work, .all-projects, .contact-me, .resume{
     display: flex;
     flex-direction: row;
