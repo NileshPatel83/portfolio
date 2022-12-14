@@ -1,31 +1,26 @@
-
 :root{
     --white-color:  #ffffff;
-    --padding-top: 1rem;
-    --paddding-left: 1rem;
-    --left-indent: 11rem;
-    --about-me-height: 6rem;
-    --my-work-height: 102rem;
-    --contact-me-height: 8rem;
-    --resume-height: 8rem;
-    --resume-header-height: 7rem;
     --margin-gap: 1rem;
+    --left-indent: 11rem;
+    --border-thickness: 0.25rem;
+    --background-color: #096594;
 }
 
 *{
     margin: 0;
     padding: 0;
     font-size: 18px;
+    color:var(--white-color);
 }
 
 body{   
-
-    background-image: url(../images/BackgroundIamge.png);
+    background-image: url(../images/BackgroundIamge-2.png);
+    color:#ffffff;
 }
 
 header, footer{
     display: block;
-    background-color:#096594;
+    background-color:var(--background-color);
     padding: var(--margin-gap);
 }
 
@@ -37,7 +32,6 @@ header h1{
     display: inline-block;
     font-size: 2rem;
     font-weight: 900;
-    color: var(--white-color);
 }
 
 header nav{
@@ -51,167 +45,97 @@ header li{
     line-height: 2rem;   
 }
 
-header a{
-    text-decoration: none;
+header a{  
     font-weight: 600;
-    color:var(--white-color);
 }
 
-.photo{
-    height: 12rem;
-    padding-top: var(--padding-top);
-    padding-left: var(--paddding-left);
+.text-decoration{
+    text-decoration: none;
 }
 
-.photo img{
-    float: left; 
-    width: var(--left-indent);
-    margin-right: var(--margin-gap);
+.line-height{
+    line-height: 2rem;
 }
 
-.photo h2{
-    display: inline;
-    font-size: 1.5rem;
-}
-
-.about-me{
-    /* height: var(--about-me-height); */
-    margin-top: var(--padding-top);
-    padding-left: var(--paddding-left);
+.photo-section, .about-me, .my-work, .all-projects, .contact-me, .resume{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    margin-top: var(--margin-gap);
 }
 
-.about-me-header{
-    /* float: left; */
-    /* position: absolute; */
-    /* height: 100%; */
-    /* height:  var(--about-me-height); */
-    /* line-height: var(--about-me-height); */
-    /* width: var(--left-indent); */
-    margin-right: var(--margin-gap);
-    font-size: 1.5rem;
-    text-align: right;
-    border-right: black solid 0.25rem;
-    padding-right: 1rem;
+.all-projects, .contact-me{
+    margin-top: 0;
+}
+
+.photo, .about-me-header, .my-work-header, .contact-me-header, .resume-header{
     flex: 0 0 var(--left-indent);
+    margin-right: var(--margin-gap); 
 }
 
-.about-me-text{
-    /* position: absolute;
-    display: inline; */
+.about-me-header, .my-work-header, .contact-me-header, .resume-header{
+    padding-right: 1rem;
+    border-right: var(--white-color) solid var(--border-thickness);   
+}
+
+.photo-text, .about-me-text,.all-projects, .contact-me-text, .resume-image{
     flex: 1;
     text-align: justify;
 }
 
-.my-work{
-    /* height: var(--my-work-height); */
-    margin-top: var(--padding-top);
-    padding-left: var(--paddding-left);
+.contact-me-text li{
+    height: 2rem;    
 }
 
-.my-work-header{
-    float: left;
-    /* height:  var(--my-work-height); */
-    /* line-height: var(--my-work-height); */
-    width: var(--left-indent);
-    margin-right: var(--margin-gap);
-    font-size: 1.5rem;
-    text-align: right;
-    border-right: black solid 0.25rem;
-    padding-right: 1rem;
-}
-
-.all-projects{
-    display: inline;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.main-project img{
-    width: 95%;
-    margin: 1rem;
-}
-
-.other-projects img{
-    width: 95%;
-    margin: 1rem;
-}
-
-.contact-me{
-    /* height: var(--contact-me-height); */
-    margin-top: var(--padding-top);
-    padding-left: var(--paddding-left);
-}
-
-.contact-me-header{
-    float: left;
-    /* height:  var(--contact-me-height); */
-    /* line-height: var(--contact-me-height); */
-    width: var(--left-indent);
-    margin-right: var(--margin-gap);
-    font-size: 1.5rem;
-    text-align: right;
-    border-right: black solid 0.25rem;
-    padding-right: 1rem;
-}
-
-.contact-me-text{
+.contact-me-text div li{
     display: inline;
 }
 
-.resume{
-    /* height: var(--resume-height); */
-    margin-top: var(--padding-top);
-    padding-left: var(--paddding-left);
-}
-
-.resume-header{
-    float: left;
-    /* height:  var(--resume-header-height); */
-    /* line-height: var(--resume-header-height); */
-    width: var(--left-indent);
-    margin-right: var(--margin-gap);
-    font-size: 1.5rem;
-    text-align: right;
-    border-right: black solid 0.25rem;
-    padding-right: 1rem;
-}
-
-.resume-text{
-    display: inline;
-}
-
-.resume img{
-    margin-top: 1rem;
+.symbol {
     height: 2rem;
+    float: left;
+    padding: 0.25rem;
+}
+
+.main-project{
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+}
+
+.other-projects{
+    flex: 0 0 50%;
+    max-width: 100%;
+    position: relative;
+}
+
+.main-project-image, .other-project-image{
+    max-width: inherit;
+    max-height: inherit;
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+    padding-bottom: var(--margin-gap);
+    padding-right: var(--margin-gap);
+}
+
+.project-info{
+    text-align: center;
+    background-color: var(--background-color);
+    width:15vw;
+    height: fit-content;
+    border: var(--white-color) solid var(--border-thickness);
+    border-radius: 0.5rem;
+    position: absolute;
+    bottom: var(--margin-gap);
+}
+
+.project-info h4, .project-info div{
+    font-size: 1vw;
+    line-height: 125%;
 }
 
 @media screen and (max-width: 768px){
-
-    .about-me{
-        flex-direction: column;
-    }
-
-    .about-me-header, .my-work-header, .contact-me-header, .resume-header{
-        display: block;
-        float: none;
-        text-align: center;
-        margin-right: auto;
-        margin-left: auto;
-        border-right: none;  
-        height: 1rem;
-        line-height: 1rem;
-    }
-
-    .about-me-text{
-        display: block;
-    }
-
-    .resume h3{
-        height: 2rem;
-    }
 
     header h1{
         display: block;
@@ -227,21 +151,41 @@ header a{
         display: block;
     }
 
+    .photo-section, .about-me, .my-work, .contact-me, .resume{
+        flex-direction: column;
+    }
+
+    .center-content{
+        width: fit-content;
+        flex: 0 0;
+        margin: 0 auto;
+        border-right: none;
+    }
+
+    .all-projects{
+        margin-top: var(--margin-gap);
+    }
+
+    .about-me-header, .my-work-header, .contact-me-header, .resume-header{
+        padding-right: 0;
+        border-bottom: var(--white-color) solid var(--border-thickness);  
+    }
+
+    .photo-text, .about-me-text, .contact-me-text, .resume-image{
+        margin-top: var(--margin-gap);
+    }
+
     .main-project, .other-projects{
         flex: 0 0 100%;
         max-width: 100%;
     }
-}
 
-@media screen and (min-width:769px){
-
-    .main-project{
-        flex: 0 0 100%;
-        max-width: 100%;
+    .main-project-image, .other-project-image{
+        padding-left: var(--margin-gap);
     }
 
-    .other-projects{
-        flex: 0 0 50%;
-        max-width: 50%;
+    .project-info{
+        margin-left: var(--margin-gap);
     }
 }
+
