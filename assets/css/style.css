@@ -243,4 +243,3 @@ when screen width is more than 768 pixels. */
 .main-project:hover, .other-project-image:hover{
     box-shadow: inset 0 0 var(--margin-gap) var(--white-color), inset 0 0 var(--margin-gap) var(--white-color);
 }
-
