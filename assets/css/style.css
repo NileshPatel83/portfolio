@@ -101,7 +101,7 @@ header a{
     padding: 0.25rem;
 }
 
-.main-project{
+.project-link{
     flex: 0 0 100%;
     max-width: 100%;
     position: relative;
@@ -110,7 +110,6 @@ header a{
 .other-projects{
     flex: 0 0 50%;
     max-width: 100%;
-    position: relative;
 }
 
 .main-project-image, .other-project-image{
@@ -121,6 +120,7 @@ header a{
     object-fit: cover;
     padding-bottom: var(--margin-gap);
     padding-right: var(--margin-gap);
+    position: relative;
 }
 
 .project-info{
@@ -131,7 +131,7 @@ header a{
     border: var(--white-color) solid var(--border-thickness);
     border-radius: 0.5rem;
     position: absolute;
-    bottom: var(--margin-gap);
+    bottom: 1.22rem;
 }
 
 .project-info h4, .project-info div{
